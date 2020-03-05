@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Exam_Scheduler
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Welcome goToHome = new Welcome();
+            this.Hide();
+            goToHome.Show();
         }
     }
 }

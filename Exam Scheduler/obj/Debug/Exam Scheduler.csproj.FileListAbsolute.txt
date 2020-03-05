@@ -1,1 +1,11 @@
 C:\Users\Mehdi\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\bin\Debug\Exam Scheduler.exe.config
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\bin\Debug\Exam Scheduler.exe.config
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\bin\Debug\Exam Scheduler.exe
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\bin\Debug\Exam Scheduler.pdb
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.csprojResolveAssemblyReference.cache
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.Properties.Resources.resources
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.csproj.GenerateResource.Cache
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.exe
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.pdb
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.Welcome.resources
+D:\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.Home.resources
