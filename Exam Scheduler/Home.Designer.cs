@@ -28,173 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.logoutBtn = new System.Windows.Forms.Button();
-            this.aboutBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Title = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.StripHomeBtn = new System.Windows.Forms.ToolStripButton();
+            this.StripAddBtn = new System.Windows.Forms.ToolStripButton();
+            this.StripDateBtn = new System.Windows.Forms.ToolStripButton();
+            this.StripTableBtn = new System.Windows.Forms.ToolStripButton();
+            this.StripSettingsBtn = new System.Windows.Forms.ToolStripButton();
+            this.StripLogOutBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // mainPanel
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 267F));
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.logoutBtn, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.aboutBtn, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 150);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 431);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(116, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(791, 738);
+            this.mainPanel.TabIndex = 5;
             // 
-            // button4
+            // toolStrip1
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(98, 219);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 61);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Exam Date";
-            this.button4.UseVisualStyleBackColor = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripHomeBtn,
+            this.StripAddBtn,
+            this.StripDateBtn,
+            this.StripTableBtn,
+            this.StripSettingsBtn,
+            this.StripLogOutBtn});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(116, 738);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // button1
+            // StripHomeBtn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(98, 77);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 61);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "View Courses";
-            this.button1.UseVisualStyleBackColor = false;
+            this.StripHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripHomeBtn.ForeColor = System.Drawing.Color.White;
+            this.StripHomeBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripHomeBtn.Image")));
+            this.StripHomeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripHomeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripHomeBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripHomeBtn.Name = "StripHomeBtn";
+            this.StripHomeBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripHomeBtn.Text = "Home";
+            this.StripHomeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripHomeBtn.Click += new System.EventHandler(this.StripHomeBtn_Click);
             // 
-            // logoutBtn
+            // StripAddBtn
             // 
-            this.logoutBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(546, 219);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(143, 61);
-            this.logoutBtn.TabIndex = 0;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.StripAddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripAddBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripAddBtn.ForeColor = System.Drawing.Color.White;
+            this.StripAddBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripAddBtn.Image")));
+            this.StripAddBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripAddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripAddBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripAddBtn.Name = "StripAddBtn";
+            this.StripAddBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripAddBtn.Text = "Add";
+            this.StripAddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripAddBtn.Click += new System.EventHandler(this.StripAddBtn_Click);
             // 
-            // aboutBtn
+            // StripDateBtn
             // 
-            this.aboutBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.aboutBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.aboutBtn.FlatAppearance.BorderSize = 0;
-            this.aboutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.aboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutBtn.ForeColor = System.Drawing.Color.White;
-            this.aboutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutBtn.Location = new System.Drawing.Point(322, 219);
-            this.aboutBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.aboutBtn.Name = "aboutBtn";
-            this.aboutBtn.Size = new System.Drawing.Size(143, 61);
-            this.aboutBtn.TabIndex = 1;
-            this.aboutBtn.Text = "About";
-            this.aboutBtn.UseVisualStyleBackColor = false;
+            this.StripDateBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripDateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripDateBtn.ForeColor = System.Drawing.Color.White;
+            this.StripDateBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripDateBtn.Image")));
+            this.StripDateBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripDateBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripDateBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripDateBtn.Name = "StripDateBtn";
+            this.StripDateBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripDateBtn.Text = "Date / Time";
+            this.StripDateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripDateBtn.Click += new System.EventHandler(this.StripDateBtn_Click);
             // 
-            // button3
+            // StripTableBtn
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(546, 77);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 61);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "View Schedule";
-            this.button3.UseVisualStyleBackColor = false;
+            this.StripTableBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripTableBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripTableBtn.ForeColor = System.Drawing.Color.White;
+            this.StripTableBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripTableBtn.Image")));
+            this.StripTableBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripTableBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripTableBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripTableBtn.Name = "StripTableBtn";
+            this.StripTableBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripTableBtn.Text = "View Table";
+            this.StripTableBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripTableBtn.Click += new System.EventHandler(this.StripTableBtn_Click);
             // 
-            // button2
+            // StripSettingsBtn
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(322, 77);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 61);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Date / Time";
-            this.button2.UseVisualStyleBackColor = false;
+            this.StripSettingsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripSettingsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripSettingsBtn.ForeColor = System.Drawing.Color.White;
+            this.StripSettingsBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripSettingsBtn.Image")));
+            this.StripSettingsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripSettingsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripSettingsBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripSettingsBtn.Name = "StripSettingsBtn";
+            this.StripSettingsBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripSettingsBtn.Text = "Settings";
+            this.StripSettingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripSettingsBtn.Click += new System.EventHandler(this.StripSettingsBtn_Click);
             // 
-            // Title
+            // StripLogOutBtn
             // 
-            this.Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Segoe UI Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(233, 9);
-            this.Title.Name = "Title";
-            this.Title.Padding = new System.Windows.Forms.Padding(20);
-            this.Title.Size = new System.Drawing.Size(353, 85);
-            this.Title.TabIndex = 3;
-            this.Title.Text = "EXAM SCHEDULER";
+            this.StripLogOutBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.StripLogOutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StripLogOutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripLogOutBtn.ForeColor = System.Drawing.Color.White;
+            this.StripLogOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("StripLogOutBtn.Image")));
+            this.StripLogOutBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StripLogOutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StripLogOutBtn.Margin = new System.Windows.Forms.Padding(7, 0, 7, 20);
+            this.StripLogOutBtn.Name = "StripLogOutBtn";
+            this.StripLogOutBtn.Size = new System.Drawing.Size(99, 87);
+            this.StripLogOutBtn.Text = "Logout";
+            this.StripLogOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StripLogOutBtn.Click += new System.EventHandler(this.StripLogOutBtn_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 677);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(907, 738);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,14 +177,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button aboutBtn;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton StripLogOutBtn;
+        private System.Windows.Forms.ToolStripButton StripHomeBtn;
+        private System.Windows.Forms.ToolStripButton StripTableBtn;
+        private System.Windows.Forms.ToolStripButton StripDateBtn;
+        private System.Windows.Forms.ToolStripButton StripSettingsBtn;
+        private System.Windows.Forms.ToolStripButton StripAddBtn;
 
     }
 }

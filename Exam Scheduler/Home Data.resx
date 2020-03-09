@@ -117,11 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-back-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-back-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus sollicitudin malesuada. Duis eu orci eget nisi viverra vestibulum sit amet in velit. Donec mollis auctor nisl tincidunt porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam diam quam, dignissim in mauris a, pulvinar aliquet ipsum. Fusce vel mi pharetra, semper libero at, porttitor eros. Nulla ut metus ultrices, pharetra justo eu, blandit lectus. Vivamus maximus enim purus, in accumsan mauris condimentum vitae. Suspendisse ante enim, sagittis et ante eu, semper porta justo. In aliquet velit in aliquam auctor.
+
+Maecenas semper purus quam, eu rutrum nulla rutrum non. Quisque sit amet commodo metus. Donec laoreet leo eros, vitae egestas tellus eleifend in. Vivamus dignissim eget nibh sit amet auctor. Mauris ut erat luctus, cursus ipsum a, tincidunt libero. Donec nisi enim, volutpat id luctus vitae, fermentum sed nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit orci. Vivamus hendrerit cursus metus, a bibendum nibh varius blandit.
+
+Morbi feugiat magna id est finibus elementum. Suspendisse tempus, risus sed tincidunt condimentum, velit leo rhoncus leo, eu lacinia augue erat a lacus. Sed nisl odio, rhoncus eget felis venenatis, efficitur sollicitudin nisi. Aliquam rutrum eros quis dolor varius, sed accumsan elit tempus. Suspendisse tempus orci eget aliquam pretium. Etiam pharetra bibendum felis ut semper. Nulla eros purus, gravida quis ligula ut, mattis dictum eros. Aenean at pretium orci, eget faucibus lorem. Sed ut metus sapien. Sed pellentesque mauris quis ultricies faucibus. Phasellus ullamcorper diam turpis.
+
+Praesent id tortor id purus scelerisque hendrerit. Etiam a pretium dolor, malesuada sodales velit. Nunc commodo ligula lorem, ac faucibus urna lobortis vel. Proin blandit non ex eu dictum. Curabitur consequat condimentum nunc non viverra. Cras sit amet ullamcorper metus, condimentum dapibus velit. Cras at mollis ipsum, et bibendum libero.</value>
   </data>
 </root>
