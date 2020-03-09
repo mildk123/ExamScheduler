@@ -38,6 +38,7 @@ namespace Exam_Scheduler
         {
             Courses goToCourses = new Courses();
             goToCourses.TopLevel = false;
+            goToCourses.FormBorderStyle = 0;
             goToCourses.AutoScroll = true;
             this.mainPanel.Controls.Add(goToCourses);
             goToCourses.Show();

@@ -16,5 +16,21 @@ namespace Exam_Scheduler
         {
             InitializeComponent();
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doneBtn_Click(object sender, EventArgs e)
+        {
+            string StrNumberOfShifts = Convert.ToString(numOfShiftBox.Value);
+            int numberOfShifts = Convert.ToInt32(numOfShiftBox.Value);
+            MessageBox.Show(StrNumberOfShifts, "Tilte", MessageBoxButtons.OKCancel);
+
+            DateTimeTable.RowCount = numberOfShifts;
+            DateTimeTable.ColumnCount = numberOfShifts;
+            
+        }
     }
 }
