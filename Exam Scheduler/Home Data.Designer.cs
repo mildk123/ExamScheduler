@@ -41,10 +41,10 @@
             this.websiteLink.AutoSize = true;
             this.websiteLink.Cursor = System.Windows.Forms.Cursors.Hand;
             this.websiteLink.DisabledLinkColor = System.Drawing.Color.Gray;
-            this.websiteLink.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.websiteLink.Location = new System.Drawing.Point(393, 677);
+            this.websiteLink.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.websiteLink.Location = new System.Drawing.Point(701, 690);
             this.websiteLink.Name = "websiteLink";
-            this.websiteLink.Size = new System.Drawing.Size(157, 23);
+            this.websiteLink.Size = new System.Drawing.Size(110, 22);
             this.websiteLink.TabIndex = 9;
             this.websiteLink.TabStop = true;
             this.websiteLink.Text = "Visit our website";
@@ -52,14 +52,12 @@
             // 
             // Title
             // 
-            this.Title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(311, 38);
+            this.Title.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(612, 9);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(290, 42);
+            this.Title.Size = new System.Drawing.Size(323, 59);
             this.Title.TabIndex = 11;
             this.Title.Text = "Exam Scheduler";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -71,19 +69,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(73, 115);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(15);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(761, 460);
+            this.richTextBox1.Size = new System.Drawing.Size(1277, 460);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Home_Data
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 738);
+            this.ClientSize = new System.Drawing.Size(1423, 738);
             this.Controls.Add(this.websiteLink);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.richTextBox1);

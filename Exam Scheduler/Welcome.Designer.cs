@@ -45,10 +45,10 @@
             // 
             this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(61, 17);
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(25, 15);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(81, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(117, 20);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "USERNAME:";
             // 
@@ -56,27 +56,27 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 68);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "PASSWORD:";
             // 
             // usernameBox
             // 
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.usernameBox.Location = new System.Drawing.Point(148, 12);
+            this.usernameBox.Location = new System.Drawing.Point(148, 10);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(189, 25);
+            this.usernameBox.Size = new System.Drawing.Size(189, 29);
             this.usernameBox.TabIndex = 0;
             // 
             // passBox
             // 
             this.passBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.passBox.Location = new System.Drawing.Point(148, 64);
+            this.passBox.Location = new System.Drawing.Point(148, 62);
             this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(189, 25);
+            this.passBox.Size = new System.Drawing.Size(189, 29);
             this.passBox.TabIndex = 1;
             // 
             // loginBtn
@@ -86,7 +86,7 @@
             this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(264, 457);
+            this.loginBtn.Location = new System.Drawing.Point(264, 482);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(92, 33);
             this.loginBtn.TabIndex = 2;
@@ -104,7 +104,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.passBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.usernameBox, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 324);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 364);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
@@ -120,19 +120,17 @@
             this.pictureBox1.Location = new System.Drawing.Point(17, 56);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(407, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(407, 226);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 258);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(86, 282);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 58);
+            this.label2.Size = new System.Drawing.Size(291, 58);
             this.label2.TabIndex = 5;
             this.label2.Text = "Exam Scheduler";
             // 
@@ -151,11 +149,11 @@
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

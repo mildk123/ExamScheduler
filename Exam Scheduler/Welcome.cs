@@ -23,5 +23,10 @@ namespace Exam_Scheduler
             this.Hide();
             goToHome.Show();
         }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

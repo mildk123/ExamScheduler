@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connections.cs" />
     <Compile Include="Courses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,11 +56,6 @@
     <Compile Include="DateTime.Designer.cs">
       <DependentUpon>DateTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="examSchedulerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>examSchedulerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Home Data.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +67,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetDateTime.Designer.cs">
+      <DependentUpon>SetDateTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
@@ -106,6 +106,9 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SetDateTime.resx">
+      <DependentUpon>SetDateTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,17 +128,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="examSchedulerDataSet.xsc">
-      <DependentUpon>examSchedulerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="examSchedulerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>examSchedulerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="examSchedulerDataSet.xss">
-      <DependentUpon>examSchedulerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

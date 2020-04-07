@@ -70,5 +70,10 @@ namespace Exam_Scheduler
             this.mainPanel.Controls.Add(goToSettings);
             goToSettings.Show();
         }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

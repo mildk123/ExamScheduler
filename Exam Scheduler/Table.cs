@@ -16,5 +16,10 @@ namespace Exam_Scheduler
         {
             InitializeComponent();
         }
+
+        private void Table_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

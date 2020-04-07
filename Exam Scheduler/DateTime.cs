@@ -29,8 +29,13 @@ namespace Exam_Scheduler
             MessageBox.Show(StrNumberOfShifts, "Tilte", MessageBoxButtons.OKCancel);
 
             DateTimeTable.RowCount = numberOfShifts;
-            DateTimeTable.ColumnCount = numberOfShifts;
+            //DateTimeTable.ColumnCount = numberOfShifts;
             
+        }
+
+        private void DateTime_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
