@@ -50,12 +50,6 @@
     <Compile Include="Courses.Designer.cs">
       <DependentUpon>Courses.cs</DependentUpon>
     </Compile>
-    <Compile Include="DateTime.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DateTime.Designer.cs">
-      <DependentUpon>DateTime.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home Data.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +90,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DateTime.resx">
-      <DependentUpon>DateTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home Data.resx">
       <DependentUpon>Home Data.cs</DependentUpon>

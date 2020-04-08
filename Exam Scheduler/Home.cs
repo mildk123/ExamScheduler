@@ -46,11 +46,11 @@ namespace Exam_Scheduler
 
         private void StripDateBtn_Click(object sender, EventArgs e)
         {
-            DateTime goToDateTime = new DateTime();
-            goToDateTime.TopLevel = false;
-            goToDateTime.AutoScroll = true;
-            this.mainPanel.Controls.Add(goToDateTime);
-            goToDateTime.Show();
+            SetDateTime goToSetDateTime = new SetDateTime();
+            goToSetDateTime.TopLevel = false;
+            goToSetDateTime.AutoScroll = true;
+            this.mainPanel.Controls.Add(goToSetDateTime);
+            goToSetDateTime.Show();
         }
 
         private void StripTableBtn_Click(object sender, EventArgs e)

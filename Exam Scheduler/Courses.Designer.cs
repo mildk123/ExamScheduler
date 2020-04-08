@@ -45,7 +45,6 @@
             this.pageTitle = new System.Windows.Forms.Label();
             this.CoursesGrid = new System.Windows.Forms.DataGridView();
             this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoursesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
@@ -143,7 +142,7 @@
             "6th Semester",
             "7th Semester",
             "8th Semester"});
-            this.semsBox.Location = new System.Drawing.Point(412, 141);
+            this.semsBox.Location = new System.Drawing.Point(412, 139);
             this.semsBox.Name = "semsBox";
             this.semsBox.Size = new System.Drawing.Size(165, 29);
             this.semsBox.TabIndex = 3;
@@ -163,7 +162,7 @@
             "2.5 Hours",
             "3 Hours",
             "3.5 Hours"});
-            this.crHourBox.Location = new System.Drawing.Point(1034, 7);
+            this.crHourBox.Location = new System.Drawing.Point(1033, 9);
             this.crHourBox.Name = "crHourBox";
             this.crHourBox.Size = new System.Drawing.Size(165, 29);
             this.crHourBox.TabIndex = 4;
@@ -174,7 +173,7 @@
             this.crHourLabel.AutoSize = true;
             this.crHourLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crHourLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.crHourLabel.Location = new System.Drawing.Point(907, 9);
+            this.crHourLabel.Location = new System.Drawing.Point(906, 9);
             this.crHourLabel.Name = "crHourLabel";
             this.crHourLabel.Size = new System.Drawing.Size(121, 25);
             this.crHourLabel.TabIndex = 8;
@@ -188,7 +187,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.80307F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.19693F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 318F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
             this.tableLayoutPanel1.Controls.Add(this.crHourBox, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.semsBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.courseNameBox, 1, 0);
@@ -221,7 +220,7 @@
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clearBtn.Location = new System.Drawing.Point(938, 137);
+            this.clearBtn.Location = new System.Drawing.Point(937, 137);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(90, 34);
             this.clearBtn.TabIndex = 6;
@@ -238,7 +237,7 @@
             this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.doneBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doneBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.doneBtn.Location = new System.Drawing.Point(1034, 137);
+            this.doneBtn.Location = new System.Drawing.Point(1033, 137);
             this.doneBtn.Name = "doneBtn";
             this.doneBtn.Size = new System.Drawing.Size(90, 34);
             this.doneBtn.TabIndex = 5;
@@ -270,30 +269,12 @@
             this.CoursesGrid.Size = new System.Drawing.Size(1182, 331);
             this.CoursesGrid.TabIndex = 12;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(1257, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "NEXT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1374, 738);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.CoursesGrid);
             this.Controls.Add(this.pageTitle);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -330,7 +311,6 @@
         private System.Windows.Forms.Button doneBtn;
         public System.Windows.Forms.DataGridView CoursesGrid;
         private System.Windows.Forms.BindingSource coursesBindingSource;
-        private System.Windows.Forms.Button button1;
 
 
 
