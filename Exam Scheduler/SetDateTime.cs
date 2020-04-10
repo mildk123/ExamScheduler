@@ -16,22 +16,17 @@ namespace Exam_Scheduler
     {
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-4USG0EK\\SQLEXPRESS;Initial Catalog=examScheduler;Integrated Security=True");
-        static int count = 0;
-        string selectedDepartment;
-        string selectedSemester;
-        string selectedCourseName;
-        string selectedCourseID;
-        string selectedDate;
-        string selectedSlot;
+
+        string selectedDepartment = "";
+        string selectedSemester = "";
+        string selectedCourseName = "";
+        string selectedCourseID = "";
+        string selectedDate = DateTime.Today.ToLongDateString().ToString();
+        string selectedSlot = "";
 
         public SetDateTime()
         {
             InitializeComponent();
-        }
-
-       
-        private void SetDateTime_Load(object sender, EventArgs e)
-        {
             GetDepartments();
             displaySchedule();
         }
@@ -39,7 +34,7 @@ namespace Exam_Scheduler
         private void displaySchedule()
         {
             con.Open();
-            using (SqlDataAdapter getScheduleReq = new SqlDataAdapter("Select CourseID,Course_Name,Course_CrHours,Course_Department,Semester,date,slot,examID from Schedule join Courses on Courses.Course_ID=Schedule.CourseID", con))
+            using (SqlDataAdapter getScheduleReq = new SqlDataAdapter("Select * from Schedule join Courses on Courses.Course_ID=Schedule.CourseID", con))
             {
                 //Fill the DataTable with records from Table.
                 DataTable dt = new DataTable();
@@ -50,21 +45,21 @@ namespace Exam_Scheduler
                 CoursesScheduleGrid.RowTemplate.Height = 30;
 
                 CoursesScheduleGrid.Width = 1250;
-                CoursesScheduleGrid.Columns[0].Width = 50;
-                CoursesScheduleGrid.Columns[1].Width = 250;
-                CoursesScheduleGrid.Columns[2].Width = 80;
-                CoursesScheduleGrid.Columns[3].Width = 170;
-                CoursesScheduleGrid.Columns[4].Width = 170;
-                CoursesScheduleGrid.Columns[5].Width = 180;
-                CoursesScheduleGrid.Columns[6].Width = 220;
-                CoursesScheduleGrid.Columns[7].Width = 70;
+                CoursesScheduleGrid.Columns[0].Width = 100;
+                CoursesScheduleGrid.Columns[1].Width = 100;
+                CoursesScheduleGrid.Columns[2].Width = 140;
+                CoursesScheduleGrid.Columns[3].Width = 180;
+                CoursesScheduleGrid.Columns[4].Width = 30;
+                CoursesScheduleGrid.Columns[5].Width = 350;
+                CoursesScheduleGrid.Columns[6].Width = 180;
+                CoursesScheduleGrid.Columns[7].Width = 80;
+                CoursesScheduleGrid.Columns[8].Width = 80;
+                CoursesScheduleGrid.Columns[9].Width = 80;
 
             }
             con.Close();
         }
         
-        
-
         private void GetDepartments()
         {
             con.Open();
@@ -90,90 +85,79 @@ namespace Exam_Scheduler
 
         }
 
-        private void GetAvailableCourses(string selectedDepart, string selectedSemester)
+        private void clearData()
         {
-            con.Open();
-            using (SqlDataAdapter dataAdapter = new SqlDataAdapter("Select * from Courses where Course_Department='"+selectedDepart+"' AND Semester='"+selectedSemester+"'", con))
+
+            departDropdown.SelectedIndex = 0;
+            semsDropdown.SelectedIndex = -1;
+            courseIDBox.Text = "";
+            SlotDropDown.SelectedIndex = -1;
+            calenderSchedule.ResetText();
+            selectedDepartment = "";
+            selectedSemester = "";
+            selectedCourseName = "";
+            selectedCourseID = "";
+            selectedDate = DateTime.Today.ToLongDateString().ToString();
+            selectedSlot = "";
+
+        }
+
+        void GetSemesterCourses(string selectedDepart, string selectedSemester)
+        {
+            try
             {
-                //Fill the DataTable with records from Table.
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
+                con.Open();
+                using (SqlDataAdapter dataAdapter = new SqlDataAdapter("Select * from Courses where Course_Department='" + selectedDepart + "' AND Semester='" + selectedSemester + "'", con))
+                {
+                    //Fill the DataTable with records from Table.
+                    DataTable dt = new DataTable();
+                    dataAdapter.Fill(dt);
 
-                //Insert the Default Item to DataTable.
-                DataRow row = dt.NewRow();
-                row[0] = 0;
-                row[1] = "Available courses";
-                dt.Rows.InsertAt(row, 0);
+                    //Insert the Default Item to DataTable.
+                    DataRow row = dt.NewRow();
+                    row[0] = 0;
+                    row[1] = "Available courses";
+                    dt.Rows.InsertAt(row, 0);
 
-                //Assign DataTable as DataSource.
-                CoursesDropdown.DataSource = dt;
-                CoursesDropdown.DisplayMember = "Course_Name";
-                CoursesDropdown.ValueMember = "Course_ID";           
+                    //Assign DataTable as DataSource.
+                    CoursesDropdown.DataSource = dt;
+                    CoursesDropdown.DisplayMember = "Course_Name";
+                    CoursesDropdown.ValueMember = "Course_ID";
+                }
+                con.Close();
             }
-            con.Close();
-        }
-
-        private void semsDropdown_TextChanged(object sender, EventArgs e)
-        {
-            selectedSemester = semsDropdown.Text;
-
-            // Just for guide
-            //message += Environment.NewLine;
-            //string message = "Selected Semester: " + semsDropdown.Text;
-            //MessageBox.Show(message);
-
-            GetAvailableCourses(selectedDepartment, selectedSemester);
-        }
-
-        private void departDropdown_TextChanged(object sender, EventArgs e)
-        {
-            count++;
-            if (count > 2)
+            catch (Exception e)
             {
-                selectedDepartment = departDropdown.Text;
-                
-                // Just for guide
-                //message += Environment.NewLine;
-                //string message = "Department_ID: " + departDropdown.SelectedValue + "Depart Name:" + departDropdown.Text;
-                //MessageBox.Show(message);
+
+                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+          
         }
 
-        private void CoursesDropdown_TextChanged(object sender, EventArgs e)
-        {
-            selectedCourseID = CoursesDropdown.SelectedValue.ToString();
-            selectedCourseName = CoursesDropdown.Text;
-
-            if (selectedCourseID == "System.Data.DataRowView")
-            {
-                courseIDBox.Text = "";
-                
-            }
-            else
-            {
-                courseIDBox.Text = selectedCourseID;
-            }
-        }
-
-        private void calenderSchedule_ValueChanged(object sender, EventArgs e)
-        {
-            selectedDate = calenderSchedule.Value.ToLongDateString().ToString();
-        }
-
-        private void SlotDropDown_TextChanged(object sender, EventArgs e)
-        {
-            selectedSlot =  SlotDropDown.Text;
-        }
 
         private void clearBTN_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("not functional yet","Information");
+            clearData();
         }
 
         private void DoneBTN_Click(object sender, EventArgs e)
         {
-            checkClashInDB();
+            if (MessageBox.Show("Are you sure schedule this course?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes == true)
+            {
+                if (selectedDepartment != "" && selectedSemester!= ""
+                    && selectedCourseName != "" && selectedCourseID != ""
+                    && selectedDate != "" && selectedSlot != "")
+                {
+                    checkClashInDB();
+                }
+                else
+                {
+                    MessageBox.Show("Data Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
+
 
         private void checkClashInDB()
         {
@@ -183,7 +167,7 @@ namespace Exam_Scheduler
                 SqlCommand command;
                 SqlDataReader dataReader;
                 string sql, output = "";
-                sql = "SELECT * from Schedule Where (date='" + selectedDate + "' AND slot='" + selectedSlot + "') OR CourseID="+selectedCourseID+"";
+                sql = "SELECT * from Schedule Where (date='" + selectedDate + "' AND slot='" + selectedSlot + "') OR CourseID=" + selectedCourseID + "";
                 command = new SqlCommand(sql, con);
                 dataReader = command.ExecuteReader();
 
@@ -200,14 +184,14 @@ namespace Exam_Scheduler
                 {
                     pushExamToDB();
                     //MessageBox.Show("Done.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    
+
                 }
                 else
                 {
-                    MessageBox.Show("The selected date and slot or course is already scheduled.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("The selected date and slot or course is already scheduled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-               
+
             }
             catch (Exception e)
             {
@@ -217,7 +201,7 @@ namespace Exam_Scheduler
 
         private void pushExamToDB()
         {
-           try
+            try
             {
                 con.Open();
                 SqlCommand pushCommand;
@@ -225,13 +209,14 @@ namespace Exam_Scheduler
                 string sql = "";
 
                 sql = "INSERT INTO Schedule(examID,CourseID,date,slot) VALUES ('PAF_" + selectedCourseID + "', '" + Int32.Parse(selectedCourseID) + "','" + selectedDate + "','" + selectedSlot + "')";
-                pushCommand = new SqlCommand(sql,con);
+                pushCommand = new SqlCommand(sql, con);
                 adapter.InsertCommand = new SqlCommand(sql, con);
                 adapter.InsertCommand.ExecuteNonQuery();
                 pushCommand.Dispose();
                 con.Close();
                 MessageBox.Show("Record inserted sucessfully");
 
+                clearData();
                 displaySchedule();
             }
             catch (Exception e)
@@ -240,6 +225,54 @@ namespace Exam_Scheduler
             }
         }
 
-        
+        private void semsDropdown_TextChanged(object sender, EventArgs e)
+        {
+            selectedSemester = semsDropdown.Text.ToString();
+
+            // Just for guide
+            //message += Environment.NewLine;
+            //string message = "Selected Semester: " + semsDropdown.Text;
+            //MessageBox.Show(message);
+
+            GetSemesterCourses(selectedDepartment, selectedSemester);          
+        }
+
+        private void departDropdown_TextChanged(object sender, EventArgs e)
+        {
+            
+                selectedDepartment = departDropdown.Text;
+                
+                 //Just for guide
+                //message += Environment.NewLine;
+                //string message = "Department_ID: " + departDropdown.SelectedValue + "Depart Name:" + departDropdown.Text;
+                //MessageBox.Show(message);
+        }
+
+        private void CoursesDropdown_TextChanged(object sender, EventArgs e)
+        {
+            selectedCourseID = CoursesDropdown.SelectedValue.ToString();
+            selectedCourseName = CoursesDropdown.Text;
+
+            if (selectedCourseID == "System.Data.DataRowView")
+            {
+                courseIDBox.Text = "";
+
+            }
+            else
+            {
+            courseIDBox.Text = selectedCourseID;
+            }
+        }
+
+        private void calenderSchedule_ValueChanged(object sender, EventArgs e)
+        {
+            selectedDate = calenderSchedule.Value.ToLongDateString().ToString();
+        }
+
+        private void SlotDropDown_TextChanged(object sender, EventArgs e)
+        {
+            selectedSlot =  SlotDropDown.Text;
+        }
+
     }
 }

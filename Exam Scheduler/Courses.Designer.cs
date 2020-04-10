@@ -56,7 +56,7 @@
             this.courseNameLabel.AutoSize = true;
             this.courseNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.courseNameLabel.Location = new System.Drawing.Point(275, 9);
+            this.courseNameLabel.Location = new System.Drawing.Point(274, 9);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(130, 25);
             this.courseNameLabel.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.courseNameBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.courseNameBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.courseNameBox.Location = new System.Drawing.Point(411, 7);
+            this.courseNameBox.Location = new System.Drawing.Point(410, 7);
             this.courseNameBox.Name = "courseNameBox";
             this.courseNameBox.Size = new System.Drawing.Size(165, 29);
             this.courseNameBox.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.departBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.departBox.Cursor = System.Windows.Forms.Cursors.No;
-            this.departBox.Location = new System.Drawing.Point(411, 51);
+            this.departBox.Location = new System.Drawing.Point(410, 51);
             this.departBox.Name = "departBox";
             this.departBox.ReadOnly = true;
             this.departBox.Size = new System.Drawing.Size(165, 29);
@@ -88,7 +88,7 @@
             this.departmentLabel.AutoSize = true;
             this.departmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.departmentLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.departmentLabel.Location = new System.Drawing.Point(292, 53);
+            this.departmentLabel.Location = new System.Drawing.Point(291, 53);
             this.departmentLabel.Name = "departmentLabel";
             this.departmentLabel.Size = new System.Drawing.Size(113, 25);
             this.departmentLabel.TabIndex = 2;
@@ -97,7 +97,7 @@
             // courseIDBox
             // 
             this.courseIDBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.courseIDBox.Location = new System.Drawing.Point(411, 95);
+            this.courseIDBox.Location = new System.Drawing.Point(410, 95);
             this.courseIDBox.Name = "courseIDBox";
             this.courseIDBox.Size = new System.Drawing.Size(165, 29);
             this.courseIDBox.TabIndex = 2;
@@ -108,7 +108,7 @@
             this.courseIdLabel.AutoSize = true;
             this.courseIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseIdLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.courseIdLabel.Location = new System.Drawing.Point(305, 97);
+            this.courseIdLabel.Location = new System.Drawing.Point(304, 97);
             this.courseIdLabel.Name = "courseIdLabel";
             this.courseIdLabel.Size = new System.Drawing.Size(100, 25);
             this.courseIdLabel.TabIndex = 4;
@@ -120,7 +120,7 @@
             this.semsLabel.AutoSize = true;
             this.semsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.semsLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.semsLabel.Location = new System.Drawing.Point(309, 141);
+            this.semsLabel.Location = new System.Drawing.Point(308, 141);
             this.semsLabel.Name = "semsLabel";
             this.semsLabel.Size = new System.Drawing.Size(96, 25);
             this.semsLabel.TabIndex = 6;
@@ -142,7 +142,7 @@
             "6th Semester",
             "7th Semester",
             "8th Semester"});
-            this.semsBox.Location = new System.Drawing.Point(411, 141);
+            this.semsBox.Location = new System.Drawing.Point(410, 139);
             this.semsBox.Name = "semsBox";
             this.semsBox.Size = new System.Drawing.Size(165, 29);
             this.semsBox.TabIndex = 3;
@@ -162,7 +162,7 @@
             "2.5 Hours",
             "3 Hours",
             "3.5 Hours"});
-            this.crHourBox.Location = new System.Drawing.Point(1032, 7);
+            this.crHourBox.Location = new System.Drawing.Point(1029, 9);
             this.crHourBox.Name = "crHourBox";
             this.crHourBox.Size = new System.Drawing.Size(165, 29);
             this.crHourBox.TabIndex = 4;
@@ -173,7 +173,7 @@
             this.crHourLabel.AutoSize = true;
             this.crHourLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crHourLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.crHourLabel.Location = new System.Drawing.Point(905, 9);
+            this.crHourLabel.Location = new System.Drawing.Point(902, 9);
             this.crHourLabel.Name = "crHourLabel";
             this.crHourLabel.Size = new System.Drawing.Size(121, 25);
             this.crHourLabel.TabIndex = 8;
@@ -187,7 +187,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.80307F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.19693F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 320F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 323F));
             this.tableLayoutPanel1.Controls.Add(this.crHourBox, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.semsBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.courseNameBox, 1, 0);
@@ -215,12 +215,13 @@
             // 
             this.clearBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.clearBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearBtn.FlatAppearance.BorderSize = 0;
             this.clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clearBtn.Location = new System.Drawing.Point(936, 137);
+            this.clearBtn.Location = new System.Drawing.Point(933, 137);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(90, 34);
             this.clearBtn.TabIndex = 6;
@@ -231,13 +232,14 @@
             // doneBtn
             // 
             this.doneBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.doneBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.doneBtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.doneBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doneBtn.FlatAppearance.BorderSize = 0;
             this.doneBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.doneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.doneBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doneBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.doneBtn.Location = new System.Drawing.Point(1032, 137);
+            this.doneBtn.Location = new System.Drawing.Point(1029, 137);
             this.doneBtn.Name = "doneBtn";
             this.doneBtn.Size = new System.Drawing.Size(90, 34);
             this.doneBtn.TabIndex = 5;
@@ -247,12 +249,13 @@
             // 
             // pageTitle
             // 
-            this.pageTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pageTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pageTitle.AutoSize = true;
-            this.pageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageTitle.Location = new System.Drawing.Point(555, 27);
+            this.pageTitle.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageTitle.Location = new System.Drawing.Point(559, 26);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(275, 52);
+            this.pageTitle.Size = new System.Drawing.Size(310, 65);
             this.pageTitle.TabIndex = 0;
             this.pageTitle.Text = "Add Courses";
             this.pageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

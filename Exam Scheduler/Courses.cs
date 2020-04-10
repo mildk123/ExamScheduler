@@ -7,67 +7,80 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Exam_Scheduler
 {
     public partial class Courses : Form
     {
-        //SqlConnection connect = new SqlConnection("Data Source=DESKTOP-TCRJGIG;Initial Catalog=examScheduler;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-4USG0EK\\SQLEXPRESS;Initial Catalog=examScheduler;Integrated Security=True");
         public Courses()
         {
             InitializeComponent();
-            GetCourses();
-        }
-     
-        void GetCourses()
-        {
-        //    connect.Open();
-        //    DataTable dt = new DataTable();
-        //    SqlDataAdapter adapter = new SqlDataAdapter("select * from Courses", connect);
-        //    adapter.Fill(dt);
-        //    CoursesGrid.DataSource = dt;
-        //    connect.Close();
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+       private void getAddedCourses()
         {
-            Home viewHome = new Home();
-            viewHome.TopLevel = false;
-            viewHome.AutoScroll = true;
-            viewHome.Show();
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from Courses", con);
+            adapter.Fill(dt);
+            CoursesGrid.DataSource = dt;
+            CoursesGrid.Columns[0].Width = 100;
+            CoursesGrid.Columns[1].Width = 350;
+            CoursesGrid.Columns[2].Width = 150;
+            CoursesGrid.Columns[3].Width = 150;
+            CoursesGrid.Columns[4].Width = 200;
+            CoursesGrid.Columns[5].Width = 150;
+            CoursesGrid.RowTemplate.Height = 30;
+            con.Close();
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+       private void clear()
+       {
+           courseNameBox.Clear();
+           courseIDBox.Clear();
+           semsBox.SelectedIndex = -1;
+           crHourBox.SelectedIndex = -1;
+       }
+
+       private void clearBtn_Click(object sender, EventArgs e)
         {
-            courseNameBox.Clear();
-            courseIDBox.Clear();
-            semsBox.Items.Clear();
-            crHourBox.Items.Clear();
+            clear();
         }
 
         private void doneBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to add this course?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            GetCourses();
+            if (MessageBox.Show("Are you sure you want to add this course?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes == true)
+            {
+                if (courseNameBox.Text != "" && departBox.Text != "" && courseIDBox.Text != "" && semsBox.Text != "" && crHourBox.Text != "")
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"insert into Courses (Course_Name,Course_Department,Course_ID,Semester,Course_CrHours) 
+                    values(@courseName,@CourseDepart,@CourseID,@sems,@crHours)", con);
+                    cmd.Parameters.AddWithValue("@courseName", courseNameBox.Text);
+                    cmd.Parameters.AddWithValue("@CourseDepart", departBox.Text);
+                    cmd.Parameters.AddWithValue("@CourseID", courseIDBox.Text);
+                    cmd.Parameters.AddWithValue("@sems", semsBox.Text);
+                    cmd.Parameters.AddWithValue("@crHours", crHourBox.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record inserted sucessfully");
+                    getAddedCourses();
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Data Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            getAddedCourses();
         }
 
         private void Courses_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'examSchedulerDataSet.Courses' table. You can move, or remove it, as needed.
-            //this.coursesTableAdapter.Fill(this.examSchedulerDataSet.Courses);
-
+            getAddedCourses();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SetDateTime s1 = new SetDateTime();
-            this.Hide();
-            s1.Show();
-        }
-
-        
-
-       
     }
 }
