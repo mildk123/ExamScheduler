@@ -17,26 +17,24 @@ namespace Exam_Scheduler
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void EditPassBtn_Click(object sender, EventArgs e)
         {
-
+            ChangePassword goToChangePass = new ChangePassword();
+            this.Hide();
+            goToChangePass.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void EditUserBtn_Click(object sender, EventArgs e)
         {
-
+            EditUsername goToEditUser = new EditUsername();
+            this.Hide();
+            goToEditUser.Show();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        
+
     }
 }

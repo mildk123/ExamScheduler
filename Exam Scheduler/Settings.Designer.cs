@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.EditUserBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.EditPassBtn = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DelCourseBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,11 +51,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EditUserBtn, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EditPassBtn, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.DelCourseBtn, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 39);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -68,7 +68,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1319, 514);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // pictureBox1
             // 
@@ -81,21 +80,22 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // EditUserBtn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(240, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Edit Username";
-            this.button1.UseVisualStyleBackColor = false;
+            this.EditUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditUserBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.EditUserBtn.FlatAppearance.BorderSize = 0;
+            this.EditUserBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.EditUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditUserBtn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.EditUserBtn.ForeColor = System.Drawing.Color.White;
+            this.EditUserBtn.Location = new System.Drawing.Point(240, 426);
+            this.EditUserBtn.Name = "EditUserBtn";
+            this.EditUserBtn.Size = new System.Drawing.Size(179, 37);
+            this.EditUserBtn.TabIndex = 6;
+            this.EditUserBtn.Text = "Edit Username";
+            this.EditUserBtn.UseVisualStyleBackColor = false;
+            this.EditUserBtn.Click += new System.EventHandler(this.EditUserBtn_Click);
             // 
             // pictureBox3
             // 
@@ -108,21 +108,22 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // EditPassBtn
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(899, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 37);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Edit Password";
-            this.button3.UseVisualStyleBackColor = false;
+            this.EditPassBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditPassBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.EditPassBtn.FlatAppearance.BorderSize = 0;
+            this.EditPassBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.EditPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditPassBtn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.EditPassBtn.ForeColor = System.Drawing.Color.White;
+            this.EditPassBtn.Location = new System.Drawing.Point(899, 426);
+            this.EditPassBtn.Name = "EditPassBtn";
+            this.EditPassBtn.Size = new System.Drawing.Size(179, 37);
+            this.EditPassBtn.TabIndex = 9;
+            this.EditPassBtn.Text = "Edit Password";
+            this.EditPassBtn.UseVisualStyleBackColor = false;
+            this.EditPassBtn.Click += new System.EventHandler(this.EditPassBtn_Click);
             // 
             // pictureBox4
             // 
@@ -134,23 +135,22 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // button2
+            // DelCourseBtn
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.SlateGray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(240, 186);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 37);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Delete Course";
-            this.button2.UseVisualStyleBackColor = false;
+            this.DelCourseBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DelCourseBtn.BackColor = System.Drawing.Color.SlateGray;
+            this.DelCourseBtn.FlatAppearance.BorderSize = 0;
+            this.DelCourseBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.DelCourseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DelCourseBtn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelCourseBtn.ForeColor = System.Drawing.Color.White;
+            this.DelCourseBtn.Location = new System.Drawing.Point(240, 186);
+            this.DelCourseBtn.Name = "DelCourseBtn";
+            this.DelCourseBtn.Size = new System.Drawing.Size(179, 37);
+            this.DelCourseBtn.TabIndex = 7;
+            this.DelCourseBtn.Text = "Delete Course";
+            this.DelCourseBtn.UseVisualStyleBackColor = false;
             // 
             // Settings
             // 
@@ -177,10 +177,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EditUserBtn;
+        private System.Windows.Forms.Button DelCourseBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button EditPassBtn;
 
     }
 }

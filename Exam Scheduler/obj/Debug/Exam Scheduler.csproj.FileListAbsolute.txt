@@ -46,3 +46,6 @@ C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exa
 C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.exe
 C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.pdb
 C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam Scheduler.csprojResolveAssemblyReference.cache
+C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.ChangePassword.resources
+C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.deleteCourse.resources
+C:\Users\Noor\Desktop\Exam Scheduler\Exam Scheduler\Exam Scheduler\obj\Debug\Exam_Scheduler.EditUsername.resources

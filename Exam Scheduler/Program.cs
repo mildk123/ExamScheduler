@@ -16,7 +16,7 @@ namespace Exam_Scheduler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SetDateTime());
+            Application.Run(new Welcome());
         }
     }
 }

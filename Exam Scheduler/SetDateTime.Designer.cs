@@ -68,14 +68,18 @@
             // 
             this.CoursesScheduleGrid.AllowUserToAddRows = false;
             this.CoursesScheduleGrid.AllowUserToDeleteRows = false;
-            this.CoursesScheduleGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CoursesScheduleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CoursesScheduleGrid.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.CoursesScheduleGrid.Location = new System.Drawing.Point(-1, 422);
+            this.CoursesScheduleGrid.Location = new System.Drawing.Point(57, 472);
             this.CoursesScheduleGrid.Margin = new System.Windows.Forms.Padding(4);
             this.CoursesScheduleGrid.Name = "CoursesScheduleGrid";
             this.CoursesScheduleGrid.ReadOnly = true;
-            this.CoursesScheduleGrid.Size = new System.Drawing.Size(1401, 406);
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkMagenta;
+            this.CoursesScheduleGrid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.CoursesScheduleGrid.Size = new System.Drawing.Size(1299, 348);
             this.CoursesScheduleGrid.TabIndex = 13;
             // 
             // tableLayoutPanel1
@@ -86,7 +90,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77309F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22691F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 534F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 537F));
             this.tableLayoutPanel1.Controls.Add(this.departDropdown, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.semsLabel, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.semsDropdown, 3, 1);
@@ -123,7 +127,10 @@
             this.departDropdown.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.departDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departDropdown.FormattingEnabled = true;
-            this.departDropdown.Location = new System.Drawing.Point(236, 53);
+            this.departDropdown.Items.AddRange(new object[] {
+            "Computer Science - COCIS",
+            ""});
+            this.departDropdown.Location = new System.Drawing.Point(235, 53);
             this.departDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.departDropdown.Name = "departDropdown";
             this.departDropdown.Size = new System.Drawing.Size(219, 24);
@@ -136,7 +143,7 @@
             this.semsLabel.AutoSize = true;
             this.semsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.semsLabel.ForeColor = System.Drawing.Color.Black;
-            this.semsLabel.Location = new System.Drawing.Point(772, 53);
+            this.semsLabel.Location = new System.Drawing.Point(769, 53);
             this.semsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.semsLabel.Name = "semsLabel";
             this.semsLabel.Size = new System.Drawing.Size(90, 24);
@@ -159,7 +166,7 @@
             "6th Semester",
             "7th Semester",
             "8th Semester"});
-            this.semsDropdown.Location = new System.Drawing.Point(870, 53);
+            this.semsDropdown.Location = new System.Drawing.Point(867, 53);
             this.semsDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.semsDropdown.Name = "semsDropdown";
             this.semsDropdown.Size = new System.Drawing.Size(219, 24);
@@ -172,7 +179,7 @@
             this.departmentLabel.AutoSize = true;
             this.departmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.departmentLabel.ForeColor = System.Drawing.Color.Black;
-            this.departmentLabel.Location = new System.Drawing.Point(121, 53);
+            this.departmentLabel.Location = new System.Drawing.Point(120, 53);
             this.departmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.departmentLabel.Name = "departmentLabel";
             this.departmentLabel.Size = new System.Drawing.Size(107, 24);
@@ -185,7 +192,7 @@
             this.courseNameLabel.AutoSize = true;
             this.courseNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseNameLabel.ForeColor = System.Drawing.Color.Black;
-            this.courseNameLabel.Location = new System.Drawing.Point(104, 128);
+            this.courseNameLabel.Location = new System.Drawing.Point(103, 128);
             this.courseNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(124, 24);
@@ -199,7 +206,7 @@
             this.CoursesDropdown.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.CoursesDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CoursesDropdown.FormattingEnabled = true;
-            this.CoursesDropdown.Location = new System.Drawing.Point(236, 127);
+            this.CoursesDropdown.Location = new System.Drawing.Point(235, 128);
             this.CoursesDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.CoursesDropdown.Name = "CoursesDropdown";
             this.CoursesDropdown.Size = new System.Drawing.Size(219, 24);
@@ -212,7 +219,7 @@
             this.courseIdLabel.AutoSize = true;
             this.courseIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseIdLabel.ForeColor = System.Drawing.Color.Black;
-            this.courseIdLabel.Location = new System.Drawing.Point(769, 128);
+            this.courseIdLabel.Location = new System.Drawing.Point(766, 128);
             this.courseIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.courseIdLabel.Name = "courseIdLabel";
             this.courseIdLabel.Size = new System.Drawing.Size(93, 24);
@@ -222,7 +229,7 @@
             // courseIDBox
             // 
             this.courseIDBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.courseIDBox.Location = new System.Drawing.Point(870, 129);
+            this.courseIDBox.Location = new System.Drawing.Point(867, 129);
             this.courseIDBox.Margin = new System.Windows.Forms.Padding(4);
             this.courseIDBox.Name = "courseIDBox";
             this.courseIDBox.ReadOnly = true;
@@ -234,7 +241,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(236, 0);
+            this.label3.Location = new System.Drawing.Point(235, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 28);
@@ -248,7 +255,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(870, 0);
+            this.label4.Location = new System.Drawing.Point(867, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 36);
@@ -261,7 +268,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(764, 175);
+            this.label1.Location = new System.Drawing.Point(761, 175);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 24);
@@ -278,7 +285,7 @@
             this.SlotDropDown.Items.AddRange(new object[] {
             "1st Slot (9:15 AM - 11:15 AM)",
             "2nd Slot (11:45 AM to 01:45 PM)"});
-            this.SlotDropDown.Location = new System.Drawing.Point(870, 175);
+            this.SlotDropDown.Location = new System.Drawing.Point(867, 175);
             this.SlotDropDown.Margin = new System.Windows.Forms.Padding(4);
             this.SlotDropDown.Name = "SlotDropDown";
             this.SlotDropDown.Size = new System.Drawing.Size(219, 24);
@@ -291,7 +298,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(123, 175);
+            this.label2.Location = new System.Drawing.Point(122, 175);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 24);
@@ -304,7 +311,7 @@
             this.calenderSchedule.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.calenderSchedule.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calenderSchedule.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calenderSchedule.Location = new System.Drawing.Point(235, 174);
+            this.calenderSchedule.Location = new System.Drawing.Point(234, 174);
             this.calenderSchedule.Name = "calenderSchedule";
             this.calenderSchedule.Size = new System.Drawing.Size(267, 27);
             this.calenderSchedule.TabIndex = 17;
@@ -320,7 +327,7 @@
             this.clearBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBTN.ForeColor = System.Drawing.Color.White;
-            this.clearBTN.Location = new System.Drawing.Point(559, 236);
+            this.clearBTN.Location = new System.Drawing.Point(556, 236);
             this.clearBTN.Name = "clearBTN";
             this.clearBTN.Size = new System.Drawing.Size(124, 42);
             this.clearBTN.TabIndex = 18;
@@ -338,7 +345,7 @@
             this.DoneBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DoneBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoneBTN.ForeColor = System.Drawing.Color.White;
-            this.DoneBTN.Location = new System.Drawing.Point(714, 236);
+            this.DoneBTN.Location = new System.Drawing.Point(711, 236);
             this.DoneBTN.Name = "DoneBTN";
             this.DoneBTN.Size = new System.Drawing.Size(124, 42);
             this.DoneBTN.TabIndex = 19;

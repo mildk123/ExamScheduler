@@ -39,13 +39,25 @@ namespace Exam_Scheduler
         private void displaySchedule()
         {
             con.Open();
-            using (SqlDataAdapter getScheduleReq = new SqlDataAdapter("Select * from Schedule join Courses on Courses.Course_ID=Schedule.CourseID", con))
+            using (SqlDataAdapter getScheduleReq = new SqlDataAdapter("Select CourseID,Course_Name,Course_CrHours,Course_Department,Semester,date,slot,examID from Schedule join Courses on Courses.Course_ID=Schedule.CourseID", con))
             {
                 //Fill the DataTable with records from Table.
                 DataTable dt = new DataTable();
                 getScheduleReq.Fill(dt);
 
                 CoursesScheduleGrid.DataSource = dt;
+                CoursesScheduleGrid.RowTemplate.Resizable = DataGridViewTriState.True;
+                CoursesScheduleGrid.RowTemplate.Height = 30;
+
+                CoursesScheduleGrid.Width = 1250;
+                CoursesScheduleGrid.Columns[0].Width = 50;
+                CoursesScheduleGrid.Columns[1].Width = 250;
+                CoursesScheduleGrid.Columns[2].Width = 80;
+                CoursesScheduleGrid.Columns[3].Width = 170;
+                CoursesScheduleGrid.Columns[4].Width = 170;
+                CoursesScheduleGrid.Columns[5].Width = 180;
+                CoursesScheduleGrid.Columns[6].Width = 220;
+                CoursesScheduleGrid.Columns[7].Width = 70;
 
             }
             con.Close();
@@ -155,29 +167,15 @@ namespace Exam_Scheduler
 
         private void clearBTN_Click(object sender, EventArgs e)
         {
-            //departDropdown.Items.Clear();
-            //semsDropdown.Items.Clear();
-            //CoursesDropdown.Items.Clear();
-            //SlotDropDown.Items.Clear();
-
-            //selectedDepartment = "";
-            //selectedSemester = "";
-            //selectedCourseName = "";
-            //selectedCourseID = "";
-            //selectedDate = "";
-            //selectedSlot = "";
-
             MessageBox.Show("not functional yet","Information");
         }
 
         private void DoneBTN_Click(object sender, EventArgs e)
         {
-            checkSameDateInDB();
-            //checkSameCourseInDB();
-            //pushExamToDB();
+            checkClashInDB();
         }
 
-        private void checkSameDateInDB()
+        private void checkClashInDB()
         {
             try
             {
@@ -185,7 +183,7 @@ namespace Exam_Scheduler
                 SqlCommand command;
                 SqlDataReader dataReader;
                 string sql, output = "";
-                sql = "SELECT * from Schedule Where date='" + selectedDate + "' AND slot='" + selectedSlot + "' ";
+                sql = "SELECT * from Schedule Where (date='" + selectedDate + "' AND slot='" + selectedSlot + "') OR CourseID="+selectedCourseID+"";
                 command = new SqlCommand(sql, con);
                 dataReader = command.ExecuteReader();
 
@@ -206,7 +204,7 @@ namespace Exam_Scheduler
                 }
                 else
                 {
-                    MessageBox.Show("The selected date and slot is already scheduled.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("The selected date and slot or course is already scheduled.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
                
@@ -215,31 +213,12 @@ namespace Exam_Scheduler
             {
                 MessageBox.Show(e.Message, "Error");
             }
-
-            //if (true)
-            //{
-            //pushExamToDB();
-            //}
-            //else
-            //{
-            //MessageBox.Show("This exam is already scheduled","Error");
-            //}
         }
-
-        private void checkSameCourseInDB() { }
 
         private void pushExamToDB()
         {
-            //string selectedDepartment;
-            //string selectedSemester;
-            //string selectedCourseName;
-            //string selectedCourseID;
-            //string selectedDate;
-            //string selectedSlot;
-
            try
             {
-
                 con.Open();
                 SqlCommand pushCommand;
                 SqlDataAdapter adapter = new SqlDataAdapter();
@@ -260,5 +239,7 @@ namespace Exam_Scheduler
                 MessageBox.Show("This slot is already scheduled   \n" + e.Message, "Error");
             }
         }
+
+        
     }
 }

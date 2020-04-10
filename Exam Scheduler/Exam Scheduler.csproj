@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Courses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Courses.Designer.cs">
       <DependentUpon>Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteCourse.Designer.cs">
+      <DependentUpon>deleteCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUsername.Designer.cs">
+      <DependentUpon>EditUsername.cs</DependentUpon>
     </Compile>
     <Compile Include="Home Data.cs">
       <SubType>Form</SubType>
@@ -88,8 +109,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteCourse.resx">
+      <DependentUpon>deleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUsername.resx">
+      <DependentUpon>EditUsername.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home Data.resx">
       <DependentUpon>Home Data.cs</DependentUpon>
@@ -119,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Courses.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -33,5 +33,16 @@ namespace Exam_Scheduler.Properties {
                 return ((string)(this["examSchedulerConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4USG0EK\\SQLEXPRESS;Initial Catalog=examScheduler;Integrated S" +
+            "ecurity=True")]
+        public string TimeTable {
+            get {
+                return ((string)(this["TimeTable"]));
+            }
+        }
     }
 }
