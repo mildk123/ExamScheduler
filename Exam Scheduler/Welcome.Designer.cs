@@ -45,10 +45,10 @@
             // 
             this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(25, 15);
+            this.usernameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(38, 13);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(117, 20);
+            this.usernameLabel.Size = new System.Drawing.Size(104, 23);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "USERNAME:";
             // 
@@ -56,10 +56,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 66);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 20);
+            this.label1.Size = new System.Drawing.Size(104, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "PASSWORD:";
             // 
@@ -68,7 +68,7 @@
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.usernameBox.Location = new System.Drawing.Point(148, 10);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(189, 29);
+            this.usernameBox.Size = new System.Drawing.Size(210, 29);
             this.usernameBox.TabIndex = 0;
             // 
             // passBox
@@ -76,7 +76,8 @@
             this.passBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.passBox.Location = new System.Drawing.Point(148, 62);
             this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(189, 29);
+            this.passBox.PasswordChar = '*';
+            this.passBox.Size = new System.Drawing.Size(210, 29);
             this.passBox.TabIndex = 1;
             // 
             // loginBtn
@@ -86,7 +87,7 @@
             this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(264, 482);
+            this.loginBtn.Location = new System.Drawing.Point(167, 484);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(92, 33);
             this.loginBtn.TabIndex = 2;
@@ -127,12 +128,13 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 282);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 292);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 58);
+            this.label2.Size = new System.Drawing.Size(325, 58);
             this.label2.TabIndex = 5;
             this.label2.Text = "Exam Scheduler";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Welcome
             // 

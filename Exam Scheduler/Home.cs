@@ -15,6 +15,7 @@ namespace Exam_Scheduler
         public Home()
         {
             InitializeComponent();
+            
         }
 
        
@@ -73,7 +74,11 @@ namespace Exam_Scheduler
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-
+            Home_Data goToHome = new Home_Data();
+            goToHome.TopLevel = false;
+            goToHome.AutoScroll = true;
+            this.mainPanel.Controls.Add(goToHome);
+            goToHome.Show();
         }
     }
 }

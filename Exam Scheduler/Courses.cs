@@ -19,6 +19,11 @@ namespace Exam_Scheduler
             InitializeComponent();
         }
 
+        private void Courses_Load(object sender, EventArgs e)
+        {
+            getAddedCourses();
+        }
+
        private void getAddedCourses()
         {
             con.Open();
@@ -49,38 +54,42 @@ namespace Exam_Scheduler
             clear();
         }
 
-        private void doneBtn_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to add this course?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes == true)
-            {
-                if (courseNameBox.Text != "" && departBox.Text != "" && courseIDBox.Text != "" && semsBox.Text != "" && crHourBox.Text != "")
-                {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(@"insert into Courses (Course_Name,Course_Department,Course_ID,Semester,Course_CrHours) 
+       private void doneBtn_Click(object sender, EventArgs e)
+       {
+           if (MessageBox.Show("Are you sure you want to add this course?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes == true)
+           {
+               if (courseNameBox.Text != "" && departBox.Text != "" && courseIDBox.Text != "" && semsBox.Text != "" && crHourBox.Text != "")
+               {
+                   try
+                   {
+                       con.Open();
+                       SqlCommand cmd = new SqlCommand(@"insert into Courses (Course_Name,Course_Department,Course_ID,Semester,Course_CrHours) 
                     values(@courseName,@CourseDepart,@CourseID,@sems,@crHours)", con);
-                    cmd.Parameters.AddWithValue("@courseName", courseNameBox.Text);
-                    cmd.Parameters.AddWithValue("@CourseDepart", departBox.Text);
-                    cmd.Parameters.AddWithValue("@CourseID", courseIDBox.Text);
-                    cmd.Parameters.AddWithValue("@sems", semsBox.Text);
-                    cmd.Parameters.AddWithValue("@crHours", crHourBox.Text);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Record inserted sucessfully");
-                    getAddedCourses();
-                    clear();
-                }
-                else
-                {
-                    MessageBox.Show("Data Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            getAddedCourses();
-        }
+                       cmd.Parameters.AddWithValue("@courseName", courseNameBox.Text);
+                       cmd.Parameters.AddWithValue("@CourseDepart", departBox.Text);
+                       cmd.Parameters.AddWithValue("@CourseID", courseIDBox.Text);
+                       cmd.Parameters.AddWithValue("@sems", semsBox.Text);
+                       cmd.Parameters.AddWithValue("@crHours", crHourBox.Text);
+                       cmd.ExecuteNonQuery();
+                       con.Close();
+                       MessageBox.Show("Record inserted sucessfully");
+                       getAddedCourses();
+                       clear();
+                   }
+                   catch (Exception)
+                   {
+                       MessageBox.Show("Technical error occured", "Error");
+                   }
 
-        private void Courses_Load(object sender, EventArgs e)
-        {
-            getAddedCourses();
-        }
+               }
+               else
+               {
+                   MessageBox.Show("Data Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               }
+           }
+       }
+
+      
 
     }
 }

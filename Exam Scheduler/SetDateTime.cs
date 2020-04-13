@@ -29,6 +29,8 @@ namespace Exam_Scheduler
             InitializeComponent();
             GetDepartments();
             displaySchedule();
+            clearData();
+
         }
 
         private void displaySchedule()
@@ -273,6 +275,8 @@ namespace Exam_Scheduler
         {
             selectedSlot =  SlotDropDown.Text;
         }
+
+       
 
     }
 }

@@ -31,6 +31,12 @@ namespace Exam_Scheduler
             goToEditUser.Show();
         }
 
+        private void DelCourseBtn_Click(object sender, EventArgs e)
+        {
+            deleteCourse goToDeleteCourse = new deleteCourse();
+            goToDeleteCourse.Show();
+        }
+
 
 
 

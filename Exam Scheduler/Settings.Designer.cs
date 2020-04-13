@@ -151,6 +151,7 @@
             this.DelCourseBtn.TabIndex = 7;
             this.DelCourseBtn.Text = "Delete Course";
             this.DelCourseBtn.UseVisualStyleBackColor = false;
+            this.DelCourseBtn.Click += new System.EventHandler(this.DelCourseBtn_Click);
             // 
             // Settings
             // 

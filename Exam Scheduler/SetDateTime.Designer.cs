@@ -97,7 +97,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77309F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22691F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 603F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 604F));
             this.tableLayoutPanel1.Controls.Add(this.departDropdown, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.semsLabel, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.semsDropdown, 3, 1);
@@ -156,7 +156,7 @@
             this.semsLabel.AutoSize = true;
             this.semsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.semsLabel.ForeColor = System.Drawing.Color.Black;
-            this.semsLabel.Location = new System.Drawing.Point(676, 48);
+            this.semsLabel.Location = new System.Drawing.Point(675, 48);
             this.semsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.semsLabel.Name = "semsLabel";
             this.semsLabel.Size = new System.Drawing.Size(90, 24);
@@ -179,7 +179,7 @@
             "6th Semester",
             "7th Semester",
             "8th Semester"});
-            this.semsDropdown.Location = new System.Drawing.Point(774, 48);
+            this.semsDropdown.Location = new System.Drawing.Point(773, 48);
             this.semsDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.semsDropdown.Name = "semsDropdown";
             this.semsDropdown.Size = new System.Drawing.Size(219, 24);
@@ -222,7 +222,7 @@
             this.CoursesDropdown.Items.AddRange(new object[] {
             "",
             ""});
-            this.CoursesDropdown.Location = new System.Drawing.Point(219, 141);
+            this.CoursesDropdown.Location = new System.Drawing.Point(219, 140);
             this.CoursesDropdown.Margin = new System.Windows.Forms.Padding(4);
             this.CoursesDropdown.Name = "CoursesDropdown";
             this.CoursesDropdown.Size = new System.Drawing.Size(219, 24);
@@ -235,7 +235,7 @@
             this.courseIdLabel.AutoSize = true;
             this.courseIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseIdLabel.ForeColor = System.Drawing.Color.Black;
-            this.courseIdLabel.Location = new System.Drawing.Point(673, 141);
+            this.courseIdLabel.Location = new System.Drawing.Point(672, 141);
             this.courseIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.courseIdLabel.Name = "courseIdLabel";
             this.courseIdLabel.Size = new System.Drawing.Size(93, 24);
@@ -245,7 +245,7 @@
             // courseIDBox
             // 
             this.courseIDBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.courseIDBox.Location = new System.Drawing.Point(774, 142);
+            this.courseIDBox.Location = new System.Drawing.Point(773, 142);
             this.courseIDBox.Margin = new System.Windows.Forms.Padding(4);
             this.courseIDBox.Name = "courseIDBox";
             this.courseIDBox.ReadOnly = true;
@@ -271,7 +271,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(774, 0);
+            this.label4.Location = new System.Drawing.Point(773, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 33);
@@ -288,7 +288,7 @@
             this.DoneBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DoneBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoneBTN.ForeColor = System.Drawing.Color.White;
-            this.DoneBTN.Location = new System.Drawing.Point(641, 263);
+            this.DoneBTN.Location = new System.Drawing.Point(640, 263);
             this.DoneBTN.Name = "DoneBTN";
             this.DoneBTN.Size = new System.Drawing.Size(124, 42);
             this.DoneBTN.TabIndex = 19;
@@ -306,7 +306,7 @@
             this.SlotDropDown.Items.AddRange(new object[] {
             "1st Slot (9:15 AM - 11:15 AM)",
             "2nd Slot (11:45 AM to 01:45 PM)"});
-            this.SlotDropDown.Location = new System.Drawing.Point(774, 226);
+            this.SlotDropDown.Location = new System.Drawing.Point(773, 225);
             this.SlotDropDown.Margin = new System.Windows.Forms.Padding(4);
             this.SlotDropDown.Name = "SlotDropDown";
             this.SlotDropDown.Size = new System.Drawing.Size(219, 24);
@@ -319,7 +319,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(668, 226);
+            this.label1.Location = new System.Drawing.Point(667, 226);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 24);
@@ -387,7 +387,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(774, 174);
+            this.label8.Location = new System.Drawing.Point(773, 174);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 43);
@@ -405,7 +405,7 @@
             this.clearBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBTN.ForeColor = System.Drawing.Color.White;
-            this.clearBTN.Location = new System.Drawing.Point(510, 263);
+            this.clearBTN.Location = new System.Drawing.Point(509, 263);
             this.clearBTN.Name = "clearBTN";
             this.clearBTN.Size = new System.Drawing.Size(124, 42);
             this.clearBTN.TabIndex = 18;
